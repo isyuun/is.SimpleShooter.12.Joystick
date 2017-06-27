@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CnControls;
 
 // 입력 -> 이동하는 기능을 가진 컴포넌트
 public class CInputMovement : MonoBehaviour
@@ -30,8 +31,10 @@ public class CInputMovement : MonoBehaviour
     {
         // float 방향 = Input.GetAxisRaw("수평/수직")
         // 방향 : -1, 0, 1 (소수없음)
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        //float h = Input.GetAxisRaw("Horizontal");
+        //float v = Input.GetAxisRaw("Vertical");
+        float h = CnInputManager.GetAxisRaw("Horizontal");
+        float v = CnInputManager.GetAxisRaw("Vertical");
 
         // 2차원 방향 벡터 생성
         Vector2 direction = new Vector2(h, v);

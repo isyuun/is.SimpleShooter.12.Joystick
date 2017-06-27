@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CnControls;
 
 // 입력 -> 발포 기능 컴포넌트
 public class CInputShot : MonoBehaviour
@@ -17,7 +18,8 @@ public class CInputShot : MonoBehaviour
     private void Update()
     {
         // 왼쪽 키를 누르면
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        //if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (CnInputManager.GetButtonDown("LaserFire"))
         {
             Shot(); // 발포
         }
